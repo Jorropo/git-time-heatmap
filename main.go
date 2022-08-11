@@ -34,7 +34,7 @@ func mainRet() error {
 	var boxes [7][24]uint
 
 	err = itr.ForEach(func(c *object.Commit) error {
-		t := c.Author.When
+		t := c.Author.When.UTC()
 		boxes[int(t.Weekday())][t.Hour()] += 1
 		return nil
 	})

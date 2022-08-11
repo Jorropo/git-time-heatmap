@@ -66,7 +66,7 @@ func mainRet() error {
 	for i, hours := range boxesStr {
 		var prefix string
 		if i == 0 {
-			prefix = "     "
+			prefix = "UTC: "
 		} else {
 			prefix = time.Weekday(i - 1).String()[:3] + ": "
 		}
